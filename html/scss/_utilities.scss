@@ -1,0 +1,17 @@
+// Commonly used utilities
+
+// Font Weights
+$base-weight: 100;
+@for $i from 1 to 10 {
+	.#{$variable-prefix}-fw-#{$i} {
+		font-weight: #{$base-weight * $i};
+	}
+}
+
+// Font Sizes
+$base-font: 4;
+@for $i from 1 through 15 {
+	.#{$variable-prefix}-fs-#{$i} {
+		font-size: #{$base-font * $i}px;
+	}
+}

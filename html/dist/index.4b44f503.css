@@ -1,0 +1,232 @@
+:root {
+  --cs-body-font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --cs-body-font-size: 1rem;
+  --cs-body-font-weight: 400;
+  --cs-body-line-height: 1.5;
+  --cs-body-color: #212529;
+  --cs-body-bg: #f9f9f9;
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  font-family: var(--cs-body-font-family);
+  font-size: var(--cs-body-font-size);
+  font-weight: var(--cs-body-font-weight);
+  line-height: var(--cs-body-line-height);
+  color: var(--cs-body-color);
+  background-color: var(--cs-body-bg);
+  margin: 0;
+}
+
+h6, h5, h4, h3, h2, h1 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.cs-fw-1 {
+  font-weight: 100;
+}
+
+.cs-fw-2 {
+  font-weight: 200;
+}
+
+.cs-fw-3 {
+  font-weight: 300;
+}
+
+.cs-fw-4 {
+  font-weight: 400;
+}
+
+.cs-fw-5 {
+  font-weight: 500;
+}
+
+.cs-fw-6 {
+  font-weight: 600;
+}
+
+.cs-fw-7 {
+  font-weight: 700;
+}
+
+.cs-fw-8 {
+  font-weight: 800;
+}
+
+.cs-fw-9 {
+  font-weight: 900;
+}
+
+.cs-fs-1 {
+  font-size: 4px;
+}
+
+.cs-fs-2 {
+  font-size: 8px;
+}
+
+.cs-fs-3 {
+  font-size: 12px;
+}
+
+.cs-fs-4 {
+  font-size: 16px;
+}
+
+.cs-fs-5 {
+  font-size: 20px;
+}
+
+.cs-fs-6 {
+  font-size: 24px;
+}
+
+.cs-fs-7 {
+  font-size: 28px;
+}
+
+.cs-fs-8 {
+  font-size: 32px;
+}
+
+.cs-fs-9 {
+  font-size: 36px;
+}
+
+.cs-fs-10 {
+  font-size: 40px;
+}
+
+.cs-fs-11 {
+  font-size: 44px;
+}
+
+.cs-fs-12 {
+  font-size: 48px;
+}
+
+.cs-fs-13 {
+  font-size: 52px;
+}
+
+.cs-fs-14 {
+  font-size: 56px;
+}
+
+.cs-fs-15 {
+  font-size: 60px;
+}
+
+.cs-button-group {
+  gap: 10px;
+  display: flex;
+}
+
+.cs-button {
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #0000;
+  border: 1px solid #0000;
+  border-radius: 4px;
+  padding: 5px 15px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  display: inline-block;
+}
+
+.cs-button--primary {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.cs-button--danger {
+  color: #fff;
+  background-color: #f43c3d;
+  border-color: #f43c3d;
+}
+
+.cs-button--outline {
+  color: #000;
+  background-color: #0000;
+  border-color: #ededed;
+}
+
+.cs-button--disabled, .cs-button:disabled {
+  color: #6b6b6b;
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+  border-color: #e6e6e6;
+}
+
+.cs-button--link {
+  color: #0d6efd;
+}
+
+.cs-button--lg {
+  padding: 12px 25px;
+}
+
+.cs-button--md {
+  padding: 10px 20px;
+}
+
+.cs-button--sm {
+  padding: 7px 15px;
+}
+
+.cs-modal {
+  box-sizing: border-box;
+  max-width: 700px;
+  background: #fff;
+  border: 1px solid #f2f2f2;
+  border-radius: 11px;
+  margin-inline: auto;
+  padding: 60px 40px;
+  position: relative;
+  box-shadow: 0 2px 25px #0000000d;
+}
+
+@media (min-width: 768px) {
+  .cs-modal {
+    gap: 30px;
+    display: flex;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cs-modal__icon {
+    margin-bottom: 20px;
+  }
+}
+
+.cs-modal__close-icon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+/*# sourceMappingURL=index.4b44f503.css.map */
