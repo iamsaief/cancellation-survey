@@ -25,4 +25,24 @@
 		right: 30px;
 		top: 30px;
 	}
+
+	&__content {
+		font-size: 15px;
+		line-height: 200%;
+		letter-spacing: 0.26px;
+		color: var(--cs-primary-gray);
+	}
+
+	.cs-button-group {
+		@include breakpoint-max(mobile) {
+			.cs-button {
+				display: block;
+				width: 100%;
+			}
+		}
+		@include breakpoint-min(mobile) {
+			display: flex;
+			gap: 30px;
+		}
+	}
 }

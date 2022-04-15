@@ -15,48 +15,96 @@
 		<link rel="stylesheet" href="./scss/style.scss" />
 	</head>
 	<body>
+		<!-- Design ui elements: buttons -->
+		<section class="cs-ui-elements cs-p-16 cs-mb-10">
+			<div class="cs-mb-12">
+				<button class="cs-button cs-button--primary cs-button--lg" type="button">50 % OFF For 6 Months</button>
+				<button class="cs-button cs-button--danger cs-button--lg" type="button">50 % OFF For 6 Months</button>
+				<button class="cs-button cs-button--outline cs-button--lg" type="button">50 % OFF For 6 Months</button>
+				<button class="cs-button cs-button--outline cs-button--lg" disabled type="button">50 % OFF For 6 Months</button>
+				<button class="cs-button cs-button--link cs-button--lg" type="button">No, thanks! I'll cancel</button>
+			</div>
+
+			<div class="cs-mb-12">
+				<button class="cs-button cs-button--primary cs-button--md" type="button">50 % OFF For 6 Months</button>
+				<button class="cs-button cs-button--danger cs-button--md" type="button">50 % OFF For 6 Months</button>
+				<button class="cs-button cs-button--outline cs-button--md" type="button">50 % OFF For 6 Months</button>
+				<button class="cs-button cs-button--outline cs-button--md" disabled type="button">50 % OFF For 6 Months</button>
+				<button class="cs-button cs-button--link cs-button--md" type="button">No, thanks! I'll cancel</button>
+			</div>
+
+			<div class="cs-mb-12">
+				<button class="cs-button cs-button--primary cs-button--sm" type="button">50 % OFF For 6 Months</button>
+				<button class="cs-button cs-button--danger cs-button--sm" type="button">50 % OFF For 6 Months</button>
+				<button class="cs-button cs-button--outline cs-button--sm" type="button">50 % OFF For 6 Months</button>
+				<button class="cs-button cs-button--outline cs-button--sm" disabled type="button">50 % OFF For 6 Months</button>
+				<button class="cs-button cs-button--link cs-button--sm" type="button">No, thanks! I'll cancel</button>
+			</div>
+		</section>
+		<!-- Design ui elements: input fields -->
+		<section class="cs-ui-elements cs-p-16 cs-mb-10">
+			<div class="cs-input-radio">
+				<div class="cs-form-group">
+					<label class="cs-radio-label" for="radio-item-1">
+						<input type="radio" name="radio-input-bug" id="radio-item-1" />
+						<div class="cs-radio__custom-input">
+							<span class="cs-radio__check-icon"></span>
+							<span class="cs-radio__text">I didn't realize it was a recurring membership</span>
+						</div>
+					</label>
+				</div>
+				<div class="cs-form-group">
+					<label class="cs-radio-label" for="radio-item-2">
+						<input type="radio" name="radio-input-bug" id="radio-item-2" checked />
+						<div class="cs-radio__custom-input">
+							<span class="cs-radio__check-icon"></span>
+							<span class="cs-radio__text">Found a better solution</span>
+						</div>
+					</label>
+				</div>
+			</div>
+			<div class="cs-form-group cs-input-textarea">
+				<textarea
+					class="cs-textarea cs-form-control"
+					placeholder="What is the better solution? If you don’t mind sharing. Your feedback is much appreaciated!"
+				></textarea>
+				<hr class="cs-hr" />
+			</div>
+			<div class="cs-form-group">
+				<label class="cs-form-label">Lorem ipsum dolor sit, amet consectetur</label>
+				<input
+					type="text"
+					class="cs-form-control"
+					placeholder="Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+				/>
+			</div>
+		</section>
+
 		<!-- cancellation survey modal -->
-		<div class="cs-modal">
-			<div class="cs-modal__close-icon">
-				<img src="../html/img/icon-close.svg" alt="cs-modal icon tag" />
-			</div>
-			<div class="cs-modal__icon">
-				<img src="../html/img/icon-tag.svg" alt="cs-modal icon tag" />
-			</div>
-			<div class="cs-modal__content">
-				<h3 class="cs-modal__title cs-fs-6 cs-fw-7">
-					Before You Go... <br />
-					Would 50% Off For 6 Months Help?
-				</h3>
-				<p class="cs-modal__text">
-					We know things REALLY suck in the world right now - and many businesses and freelancers are struggling to stay
-					afloat during this COVID-19 crisis.
-				</p>
-				<br />
-				<p class="cs-modal__text--bold cs-fw-700">So if you could use the extra cushion, grab 50% off for 6 months.</p>
-				<p class="cs-modal__text">We hope you're staying safe and healthy!</p>
-				<div class="cs-button-group-">
-					<!-- <button class="cs-button cs-button--primary cs-button--lg" type="button">50 % OFF For 6 Months</button>
-					<button class="cs-button cs-button--danger cs-button--lg" type="button">50 % OFF For 6 Months</button>
-					<button class="cs-button cs-button--outline cs-button--lg" type="button">50 % OFF For 6 Months</button> -->
-					<button class="cs-button cs-button--outline cs-button--lg" disabled type="button">
-						50 % OFF For 6 Months
-					</button>
-					<button class="cs-button cs-button--link cs-button--lg" type="button">No, thanks! I'll cancel</button>
-
-					<button class="cs-button cs-button--primary cs-button--md" type="button">50 % OFF For 6 Months</button>
-					<button class="cs-button cs-button--danger cs-button--md" type="button">50 % OFF For 6 Months</button>
-					<button class="cs-button cs-button--outline cs-button--md" type="button">50 % OFF For 6 Months</button>
-					<button class="cs-button cs-button--outline cs-button--md" disabled type="button">
-						50 % OFF For 6 Months
-					</button>
-
-					<button class="cs-button cs-button--primary cs-button--sm" type="button">50 % OFF For 6 Months</button>
-					<button class="cs-button cs-button--danger cs-button--sm" type="button">50 % OFF For 6 Months</button>
-					<button class="cs-button cs-button--outline cs-button--sm" type="button">50 % OFF For 6 Months</button>
-					<button class="cs-button cs-button--outline cs-button--sm" disabled type="button">
-						50 % OFF For 6 Months
-					</button>
+		<div class="cs-p-16">
+			<div class="cs-modal">
+				<div class="cs-modal__close-icon">
+					<img src="../html/img/icon-close.svg" alt="cs-modal icon tag" />
+				</div>
+				<div class="cs-modal__icon">
+					<img src="../html/img/icon-tag.svg" alt="cs-modal icon tag" />
+				</div>
+				<div class="cs-modal__content">
+					<h3 class="cs-modal__title cs-fs-24 cs-fw-7 cs-primary-black">
+						Before You Go... <br />
+						Would 50% Off For 6 Months Help?
+					</h3>
+					<p class="cs-modal__text">
+						We know things REALLY suck in the world right now - and many businesses and freelancers are struggling to
+						stay afloat during this COVID-19 crisis.
+					</p>
+					<br />
+					<p class="cs-modal__text--bold cs-fw-7">So if you could use the extra cushion, grab 50% off for 6 months.</p>
+					<p class="cs-modal__text cs-mb-40">We hope you're staying safe and healthy!</p>
+					<div class="cs-button-group">
+						<button class="cs-button cs-button--primary cs-button--lg" type="button">50 % OFF For 6 Months</button>
+						<button class="cs-button cs-button--link cs-button--lg" type="button">No, thanks! I'll cancel</button>
+					</div>
 				</div>
 			</div>
 		</div>
