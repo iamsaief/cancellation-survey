@@ -1,8 +1,11 @@
 .cs-ui-wrapper {
 	max-width: 1050px;
-	margin-inline: 16px;
 	@include breakpoint-min(desktop-lg) {
 		margin-inline: auto;
+	}
+
+	@include breakpoint-max(mobile) {
+		padding: 16px;
 	}
 
 	&:not(.cs-ui-wrapper--form) {
@@ -28,4 +31,7 @@
 
 .cs-cancel-form-header {
 	text-align: center;
+	p {
+		color: var(--#{$variable-prefix}-primary-gray);
+	}
 }

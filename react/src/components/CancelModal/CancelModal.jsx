@@ -2,7 +2,7 @@ import React from 'react';
 import iconClose from '../../img/icon-close.svg';
 import iconTag from '../../img/icon-tag.svg';
 
-export function CancelModal({ count, handleCountIncrease }) {
+export function CancelModal({ handleCountIncrease }) {
 	return (
 		<>
 			{/* Cancellation Survey modal */}

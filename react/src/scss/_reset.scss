@@ -29,6 +29,7 @@ body {
 	line-height: var(--#{$variable-prefix}-body-line-height);
 	color: var(--#{$variable-prefix}-body-color);
 	background-color: var(--#{$variable-prefix}-body-bg);
+	letter-spacing: var(--#{$variable-prefix}-body-letter-spacing);
 	word-break: break-word;
 }
 

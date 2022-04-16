@@ -76,8 +76,11 @@
 }
 
 .cs-button-group {
-	display: flex;
-	gap: 10px;
+	&:not(.cs-button-group--between) {
+		display: flex;
+		gap: 10px;
+	}
+
 	&--between {
 		@include breakpoint-min(350) {
 			display: flex;
