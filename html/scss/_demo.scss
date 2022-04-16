@@ -1,5 +1,16 @@
-.cs-ui-elements {
-	max-width: 1200px;
-	margin-inline: auto;
-	background: #fff;
+.cs-ui-wrapper {
+	max-width: 1050px;
+	margin-inline: 16px;
+	@include breakpoint-min(desktop-lg) {
+		margin-inline: auto;
+	}
+	background: #ffffff;
+	border-radius: 10px;
+}
+
+.cs-ui-elements-wrapper {
+	@include breakpoint-min(tablet) {
+		max-width: 730px;
+		margin-inline: auto;
+	}
 }

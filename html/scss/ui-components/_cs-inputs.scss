@@ -12,6 +12,7 @@
 		font-size: 15px;
 		font-weight: 400;
 		line-height: 2;
+		height: 50px;
 		color: var(--cs-primary-black);
 		background-color: var(--cs-primary-white);
 		background-clip: padding-box;
@@ -21,6 +22,10 @@
 		appearance: none;
 		border-radius: 4px;
 		transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	}
+
+	textarea.cs-form-control {
+		min-height: 130px;
 	}
 
 	.cs-form-control {
@@ -39,11 +44,17 @@
 		@extend .cs-fw-5;
 		@extend .cs-mb-10;
 		display: block;
+
+		&--has-tooltip {
+			display: flex;
+			gap: 6px;
+			align-items: center;
+		}
 	}
 }
 
 .cs-hr {
-	@extend .cs-my-20;
+	@extend .cs-my-30;
 	border-top: 1px solid #efefef;
 }
 
@@ -71,6 +82,13 @@ $transition: 200ms linear;
 						}
 					}
 				}
+
+				// Radio Select Input
+				+ .cs-radio__custom-input--select {
+					.cs-radio__text {
+						color: $primary-color;
+					}
+				}
 			}
 
 			&:focus {
@@ -86,8 +104,10 @@ $transition: 200ms linear;
 
 	&__custom-input {
 		display: flex;
+		@include breakpoint-min(350) {
+			align-items: center;
+		}
 		gap: 8px;
-		align-items: center;
 		padding: 15px 20px;
 		border-radius: 30px;
 		border: 1px solid #f2f2f2;
@@ -97,6 +117,7 @@ $transition: 200ms linear;
 		width: 20px;
 		height: 20px;
 		display: inline-block;
+		flex-shrink: 0;
 		border: 1px solid #555555;
 		border-radius: 50%;
 		transition: $transition;
@@ -121,5 +142,36 @@ $transition: 200ms linear;
 		line-height: 18px;
 		@extend .cs-primary-black;
 		@extend .cs-fw-5;
+	}
+}
+
+// Radio Select Optiopn
+.cs-radio-select {
+	display: flex;
+	.cs-radio-label {
+		&:first-child {
+			.cs-radio__custom-input--select {
+				border-radius: 4px 0px 0px 4px;
+			}
+		}
+		&:last-child {
+			.cs-radio__custom-input--select {
+				border-radius: 0 4px 4px 0px;
+			}
+		}
+	}
+}
+
+.cs-tooltip {
+	display: inline-flex;
+	cursor: pointer;
+	&__icon {
+		display: inline-block;
+		width: 14px;
+		height: 16px;
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url(csTooltipIcon());
 	}
 }

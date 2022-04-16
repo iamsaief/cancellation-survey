@@ -57,4 +57,36 @@
 		// height: 30px;
 		padding: 7px 12px;
 	}
+
+	// Iconic Buttons
+	&--has-icon {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+
+		.cs-button__icon {
+			display: inline-flex;
+		}
+	}
+}
+
+.cs-button-group {
+	display: flex;
+	gap: 10px;
+	&--between {
+		@include breakpoint-min(350) {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		@include breakpoint-max(349.98) {
+			.cs-button {
+				justify-content: center;
+				width: 100%;
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
 }
