@@ -1,0 +1,72 @@
+// Document
+//
+// Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	@media (prefers-reduced-motion: no-preference) {
+		scroll-behavior: smooth;
+	}
+}
+
+// Body
+//
+// 1. Remove the margin in all browsers.
+// 2. As a best practice, apply a default `background-color`.
+// 3. Prevent adjustments of font size after orientation changes in iOS.
+// 4. Change the default tap highlight to be completely transparent in iOS.
+
+body {
+	margin: 0;
+	font-family: var(--#{$variable-prefix}-body-font-family);
+	font-size: var(--#{$variable-prefix}-body-font-size);
+	font-weight: var(--#{$variable-prefix}-body-font-weight);
+	line-height: var(--#{$variable-prefix}-body-line-height);
+	color: var(--#{$variable-prefix}-body-color);
+	background-color: var(--#{$variable-prefix}-body-bg);
+	word-break: break-word;
+}
+
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-weight: 500;
+	line-height: 1.6;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+textarea {
+	resize: vertical;
+}
+
+hr {
+	height: 1px;
+	margin: 1rem 0;
+	color: inherit;
+	border: 0;
+}
