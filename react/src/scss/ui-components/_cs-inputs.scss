@@ -149,11 +149,20 @@ $transition: 200ms linear;
 .cs-radio-select {
 	display: flex;
 	.cs-radio-label {
+		.cs-radio__custom-input {
+			border-radius: 0;
+		}
+
+		&:not(:first-child) {
+			margin-left: -1px;
+		}
+
 		&:first-child {
 			.cs-radio__custom-input--select {
 				border-radius: 4px 0px 0px 4px;
 			}
 		}
+
 		&:last-child {
 			.cs-radio__custom-input--select {
 				border-radius: 0 4px 4px 0px;
