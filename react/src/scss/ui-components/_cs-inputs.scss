@@ -1,4 +1,4 @@
-// Custom Radio
+// Input Field Styles
 .cs-form-group {
 	&:not(:first-child) {
 		margin-top: 20px;
@@ -51,11 +51,7 @@
 	}
 }
 
-.cs-hr {
-	@extend .cs-my-30;
-	border-top: 1px solid #efefef;
-}
-
+// Custom Radio types
 $primary-color: var(--cs-primary-blue);
 $transition: 200ms linear;
 .cs-radio {
@@ -143,7 +139,7 @@ $transition: 200ms linear;
 	}
 }
 
-// Radio Select Optiopn
+// Radio Select Option
 .cs-radio-select {
 	display: flex;
 	.cs-radio-label {
@@ -169,20 +165,7 @@ $transition: 200ms linear;
 	}
 }
 
-.cs-tooltip {
-	display: inline-flex;
-	cursor: pointer;
-	&__icon {
-		display: inline-block;
-		width: 14px;
-		height: 16px;
-		background-size: 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-image: url(csTooltipIcon());
-	}
-}
-
+// React Select Custom styles
 .cs-react-select {
 	.select__control {
 		border-color: #f2f2f2 !important;

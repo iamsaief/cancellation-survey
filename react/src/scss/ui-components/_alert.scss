@@ -1,3 +1,4 @@
+// Alert Styles
 .cs-alert {
 	display: flex;
 	gap: 15px;
@@ -15,9 +16,6 @@
 		background-repeat: no-repeat;
 		background-image: url(csTooltipIcon());
 		margin-top: 6px;
-	}
-
-	&__content {
 	}
 }
 
