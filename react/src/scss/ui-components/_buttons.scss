@@ -80,15 +80,18 @@
 	&:not(.cs-button-group--between) {
 		display: flex;
 		gap: 10px;
+		@include breakpoint-max(499.98) {
+			flex-direction: column;
+		}
 	}
 
 	&--between {
-		@include breakpoint-min(350) {
+		@include breakpoint-min(500) {
 			display: flex;
 			justify-content: space-between;
 		}
 
-		@include breakpoint-max(349.98) {
+		@include breakpoint-max(499.98) {
 			.cs-button {
 				justify-content: center;
 				width: 100%;

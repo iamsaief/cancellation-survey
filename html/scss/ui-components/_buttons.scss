@@ -1,3 +1,4 @@
+// Button Styles
 .cs-button {
 	display: inline-block;
 	font-size: 13px;
@@ -68,18 +69,29 @@
 			display: inline-flex;
 		}
 	}
+
+	&--is-iconic {
+		padding-inline: 9px;
+		padding-block: 7.5px;
+	}
 }
 
 .cs-button-group {
-	display: flex;
-	gap: 10px;
+	&:not(.cs-button-group--between) {
+		display: flex;
+		gap: 10px;
+		@include breakpoint-max(499.98) {
+			flex-direction: column;
+		}
+	}
+
 	&--between {
-		@include breakpoint-min(350) {
+		@include breakpoint-min(500) {
 			display: flex;
 			justify-content: space-between;
 		}
 
-		@include breakpoint-max(349.98) {
+		@include breakpoint-max(499.98) {
 			.cs-button {
 				justify-content: center;
 				width: 100%;

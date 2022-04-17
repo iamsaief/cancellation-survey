@@ -1,6 +1,4 @@
-// Document
-//
-// Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
+// CSS Resets
 
 *,
 *::before,
@@ -14,13 +12,6 @@
 	}
 }
 
-// Body
-//
-// 1. Remove the margin in all browsers.
-// 2. As a best practice, apply a default `background-color`.
-// 3. Prevent adjustments of font size after orientation changes in iOS.
-// 4. Change the default tap highlight to be completely transparent in iOS.
-
 body {
 	margin: 0;
 	font-family: var(--#{$variable-prefix}-body-font-family);
@@ -29,6 +20,7 @@ body {
 	line-height: var(--#{$variable-prefix}-body-line-height);
 	color: var(--#{$variable-prefix}-body-color);
 	background-color: var(--#{$variable-prefix}-body-bg);
+	letter-spacing: var(--#{$variable-prefix}-body-letter-spacing);
 	word-break: break-word;
 }
 

@@ -3,6 +3,7 @@
   --cs-body-font-size: 15px;
   --cs-body-font-weight: 400;
   --cs-body-line-height: 2;
+  --cs-body-letter-spacing: .26px;
   --cs-body-color: #000;
   --cs-body-bg: #f9f9f9;
   --cs-primary-black: #000;
@@ -29,6 +30,7 @@ body {
   line-height: var(--cs-body-line-height);
   color: var(--cs-body-color);
   background-color: var(--cs-body-bg);
+  letter-spacing: var(--cs-body-letter-spacing);
   word-break: break-word;
   margin: 0;
 }
@@ -1367,19 +1369,30 @@ hr {
   display: inline-flex;
 }
 
-.cs-button-group {
+.cs-button--is-iconic {
+  padding-block: 7.5px;
+  padding-inline: 9px;
+}
+
+.cs-button-group:not(.cs-button-group--between) {
   gap: 10px;
   display: flex;
 }
 
-@media (min-width: 350px) {
+@media (max-width: 499.98px) {
+  .cs-button-group:not(.cs-button-group--between) {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 500px) {
   .cs-button-group--between {
     justify-content: space-between;
     display: flex;
   }
 }
 
-@media (max-width: 349.98px) {
+@media (max-width: 499.98px) {
   .cs-button-group--between .cs-button {
     width: 100%;
     justify-content: center;
@@ -1418,7 +1431,6 @@ hr {
 .cs-form-group .cs-form-control:focus {
   color: var(--cs-primary-black);
   background-color: var(--cs-primary-white);
-  border-color: var(--cs-primary-blue);
   box-shadow: var(--cs-focus-box-shadow);
   border-color: #a0bff9;
   outline: none;
@@ -1432,10 +1444,6 @@ hr {
   align-items: center;
   gap: 6px;
   display: flex;
-}
-
-.cs-hr {
-  border-top: 1px solid #efefef;
 }
 
 .cs-radio-label {
@@ -1518,12 +1526,37 @@ hr {
   display: flex;
 }
 
+.cs-radio-select .cs-radio-label .cs-radio__custom-input {
+  border-radius: 0;
+}
+
+.cs-radio-select .cs-radio-label:not(:first-child) {
+  margin-left: -1px;
+}
+
 .cs-radio-select .cs-radio-label:first-child .cs-radio__custom-input--select {
   border-radius: 4px 0 0 4px;
 }
 
 .cs-radio-select .cs-radio-label:last-child .cs-radio__custom-input--select {
   border-radius: 0 4px 4px 0;
+}
+
+.cs-react-select .select__control {
+  height: 50px;
+  border-color: #f2f2f2 !important;
+}
+
+.cs-react-select .select__control--is-focused {
+  color: var(--cs-primary-black);
+  background-color: var(--cs-primary-white);
+  box-shadow: var(--cs-focus-box-shadow);
+  outline: none;
+  border-color: #a0bff9 !important;
+}
+
+.cs-react-select .select__value-container {
+  padding-left: 10px;
 }
 
 .cs-tooltip {
@@ -1655,9 +1688,6 @@ hr {
 
 .cs-ui-wrapper {
   max-width: 1050px;
-  background: #fff;
-  border-radius: 10px;
-  margin-inline: 16px;
 }
 
 @media (min-width: 1200px) {
@@ -1666,11 +1696,44 @@ hr {
   }
 }
 
+@media (max-width: 575.98px) {
+  .cs-ui-wrapper {
+    padding: 16px;
+  }
+}
+
+.cs-ui-wrapper:not(.cs-ui-wrapper--form) {
+  background: #fff;
+  border-radius: 10px;
+}
+
+.cs-ui-wrapper--form-top-bar {
+  align-items: center;
+  gap: 10px;
+  display: inline-flex;
+}
+
+.cs-ui-wrapper--form .cs-hr {
+  border-color: #e6e6e6;
+}
+
 @media (min-width: 768px) {
   .cs-ui-elements-wrapper {
     max-width: 730px;
     margin-inline: auto;
   }
+}
+
+.cs-cancel-form-header {
+  text-align: center;
+}
+
+.cs-cancel-form-header p {
+  color: var(--cs-primary-gray);
+}
+
+.cs-hr {
+  border-top: 1px solid #efefef;
 }
 
 /*# sourceMappingURL=index.4b44f503.css.map */

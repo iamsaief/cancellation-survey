@@ -1,11 +1,29 @@
+// Common  Styles
 .cs-ui-wrapper {
 	max-width: 1050px;
-	margin-inline: 16px;
 	@include breakpoint-min(desktop-lg) {
 		margin-inline: auto;
 	}
-	background: #ffffff;
-	border-radius: 10px;
+
+	@include breakpoint-max(mobile) {
+		padding: 16px;
+	}
+
+	&:not(.cs-ui-wrapper--form) {
+		background: #ffffff;
+		border-radius: 10px;
+	}
+
+	&--form {
+		&-top-bar {
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+		}
+		.cs-hr {
+			border-color: #e6e6e6;
+		}
+	}
 }
 
 .cs-ui-elements-wrapper {
@@ -13,4 +31,16 @@
 		max-width: 730px;
 		margin-inline: auto;
 	}
+}
+
+.cs-cancel-form-header {
+	text-align: center;
+	p {
+		color: var(--#{$variable-prefix}-primary-gray);
+	}
+}
+
+.cs-hr {
+	@extend .cs-my-30;
+	border-top: 1px solid #efefef;
 }

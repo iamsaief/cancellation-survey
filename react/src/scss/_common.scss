@@ -20,6 +20,9 @@
 			align-items: center;
 			gap: 10px;
 		}
+		.cs-hr {
+			border-color: #e6e6e6;
+		}
 	}
 }
 
@@ -35,4 +38,9 @@
 	p {
 		color: var(--#{$variable-prefix}-primary-gray);
 	}
+}
+
+.cs-hr {
+	@extend .cs-my-30;
+	border-top: 1px solid #efefef;
 }
