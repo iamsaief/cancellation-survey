@@ -33,8 +33,6 @@
 			outline: 0;
 			color: var(--cs-primary-black);
 			background-color: var(--cs-primary-white);
-			border-color: var(--cs-primary-blue);
-
 			box-shadow: var(--cs-focus-box-shadow);
 			border-color: lighten($color: $primary-blue, $amount: 25);
 		}
@@ -182,5 +180,24 @@ $transition: 200ms linear;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-image: url(csTooltipIcon());
+	}
+}
+
+.cs-react-select {
+	.select__control {
+		border-color: #f2f2f2 !important;
+		height: 50px;
+
+		&--is-focused {
+			outline: 0;
+			color: var(--cs-primary-black);
+			background-color: var(--cs-primary-white);
+			box-shadow: var(--cs-focus-box-shadow);
+			border-color: lighten($color: $primary-blue, $amount: 25) !important;
+		}
+	}
+
+	.select__value-container {
+		padding-left: 10px;
 	}
 }

@@ -77,6 +77,7 @@ export function Form({ handleCountDecrease }) {
 												id={id}
 												onChange={handleRadioChange}
 												checked={formElements.radioElements.selectedId === id}
+												value={label}
 											/>
 											<div className="cs-radio__custom-input">
 												<span className="cs-radio__check-icon"></span>
